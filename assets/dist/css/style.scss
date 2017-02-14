@@ -1,0 +1,184 @@
+/*
+Theme Name: Beetroot
+Theme URI: http://underscores.me/
+Author: Beetroot Project Delivery Unit
+Author URI: http://beetroot.se/
+Description: Beetroot Barebone Development theme
+Version: 1.0.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: beetroot
+
+Beetroot is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Mixins
+# Variables
+# Typography
+# Wordpress Classes Styling
+# Parts
+# Forms
+# Comments
+## Layout
+# Header
+# Footer
+# Sidebar
+# 404 page
+# Search page
+# Single post
+# Post archive
+# RTL-specific style
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> FRAMEWORKS:
+----------------------------------------------------------------
+# SUSY:
+# @import "framework/susy";
+
+# FOUNDATION:
+# @import "framework/foundation";
+# @include foundation-everything();
+# or @include foundation-everything($flex:true); if you want to use flexbox layout
+# All Foundation SCSS settings can be changed inside settings/_settings.scss
+#
+
+# BOOTSTRAP:
+# @import "framework/bootstrap";
+# All Bootstrap SCSS settings can be changed inside bootstrap/_variables.scss
+#
+--------------------------------------------------------------*/
+@import "framework/bootstrap";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins";
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import "variables";
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography";
+
+/*--------------------------------------------------------------
+# Wordpress Classes Styling
+--------------------------------------------------------------*/
+@import "components/wp";
+/*--------------------------------------------------------------
+# Parts
+--------------------------------------------------------------*/
+@import "components/parts";
+/*--------------------------------------------------------------
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "components/forms";
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+@import "components/comments";
+/*--------------------------------------------------------------
+>>> LAYOUT:
+----------------------------------------------------------------
+
+# Header
+--------------------------------------------------------------*/
+@import "layouts/header";
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+@import "layouts/sidebar";
+/*--------------------------------------------------------------
+# 404 Page
+--------------------------------------------------------------*/
+@import "layouts/404";
+/*--------------------------------------------------------------
+# Search Page
+--------------------------------------------------------------*/
+@import "layouts/search";
+/*--------------------------------------------------------------
+
+
+
+# Import posts and pages layout styles here:
+
+
+--------------------------------------------------------------*/
+@import "layouts/single";
+@import "layouts/archive";
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import "layouts/footer";
+
+/*--------------------------------------------------------------
+# Visual Composer parts
+--------------------------------------------------------------*/
+@import "components/visual_composer";
+
+/*--------------------------------------------------------------
+# RTL-specific styles
+--------------------------------------------------------------*/
+@import "components/rtl";
+
+.banner{
+  background: #76c7c0;
+  height: 80px;
+  position: relative;
+  color: #fff;
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 9px;
+    width: 100%;
+    background-image: url("../images/1.png") ;
+    background-repeat: repeat-x;
+    background-position: top center;
+    z-index: 1111;
+
+
+  }
+}
+
+.brand{
+  color: #fff;
+  float: left;
+  font-size: 30px;
+  line-height:80px;
+}
+
+.nav-primary{
+  float: right;
+  list-style: none;
+}
+
+.menu-item{
+  margin-right: 20px;
+
+  a{
+    &:hover{
+      text-decoration: none;
+    }
+    color: #fff;
+    font-size: 13px;
+    line-height: 80px;
+  }
+  display: inline-block;
+  //float: left;
+}
+.active{
+  a{
+    background: #62a29e;
+    padding: 10px;
+    border-radius: 15px;
+  }
+}

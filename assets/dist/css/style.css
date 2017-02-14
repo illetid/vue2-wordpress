@@ -1,0 +1,267 @@
+/*
+Theme Name: Beetroot
+Theme URI: http://underscores.me/
+Author: Beetroot Project Delivery Unit
+Author URI: http://beetroot.se/
+Description: Beetroot Barebone Development theme
+Version: 1.0.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: beetroot
+
+Beetroot is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Mixins
+# Variables
+# Typography
+# Wordpress Classes Styling
+# Parts
+# Forms
+# Comments
+## Layout
+# Header
+# Footer
+# Sidebar
+# 404 page
+# Search page
+# Single post
+# Post archive
+# RTL-specific style
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> FRAMEWORKS:
+----------------------------------------------------------------
+# SUSY:
+# @import "framework/susy";
+
+# FOUNDATION:
+# @import "framework/foundation";
+# @include foundation-everything();
+# or @include foundation-everything($flex:true); if you want to use flexbox layout
+# All Foundation SCSS settings can be changed inside settings/_settings.scss
+#
+
+# BOOTSTRAP:
+# @import "framework/bootstrap";
+# All Bootstrap SCSS settings can be changed inside bootstrap/_variables.scss
+#
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+  # Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both; }
+
+p {
+  margin-bottom: 1.5em; }
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic; }
+
+blockquote {
+  margin: 0 1.5em; }
+
+address {
+  margin: 0 0 1.5em; }
+
+pre {
+  background: #eee;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em; }
+
+code,
+kbd,
+tt,
+var {
+  font-size: 15px;
+  font-size: 0.9375rem; }
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
+big {
+  font-size: 125%; }
+
+.post-wrapper {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+
+.post {
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+  width: 22%; }
+  .post h2 {
+    font-size: 18px; }
+  .post img {
+    max-width: 100%; }
+
+.categories {
+  list-style: none; }
+
+.category-item {
+  display: inline-block;
+  padding: 3px;
+  border-radius: 5px;
+  background: #fff;
+  margin: 5px; }
+
+.banner {
+  height: 200px;
+  background: url("http://cdn.ebaumsworld.com/mediaFiles/picture/2047837/82964655.jpg") 50% no-repeat;
+  background-size: cover; }
+
+.filters {
+  background: #ccd;
+  padding: 20px; }
+
+.btn-container {
+  padding: 20px;
+  background: #cdc; }
+  .btn-container .open {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: lightgreen;
+    color: #fff; }
+  .btn-container .cl {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: darkred;
+    color: #fff; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 22; }
+
+.single-preview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background-color: #fff;
+  padding: 30px;
+  z-index: 222; }
+  .single-preview img {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto; }
+  .single-preview .post-nav {
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700; }
+  .single-preview .prev {
+    position: absolute;
+    top: calc( 50% - 70px);
+    left: 10px; }
+  .single-preview .next {
+    position: absolute;
+    top: calc( 50% - 70px);
+    right: 10px; }
+  .single-preview .cls-btn {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    color: #000;
+    background-color: red;
+    top: 40px;
+    left: -30px; }
+
+.post-single {
+  background-color: #ccc; }
+
+.post-content {
+  max-width: 70%;
+  margin: auto;
+  background-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .post-content img {
+    display: block;
+    max-width: 90%;
+    margin: auto;
+    padding: 10px; }
+
+.btn-container {
+  position: relative;
+  height: 50px; }
+
+.read-more {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 15px;
+  background-color: mediumseagreen;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  tanslateX: -50%; }
+
+.next-post-link {
+  float: right;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 15px;
+  background-color: salmon;
+  color: #fff; }
+
+.prev-post-link {
+  float: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 15px;
+  background-color: salmon;
+  color: #fff; }
+
+/*# sourceMappingURL=style.css.map */
